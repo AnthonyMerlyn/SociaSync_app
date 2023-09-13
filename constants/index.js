@@ -5,10 +5,15 @@ export const sidebarLinks = [
       label: "Home",
     },
     {
-      imgURL: "/assets/search.svg",
-      route: "/search",
-      label: "Search",
+      imgURL: "/assets/location.svg",
+      route: "/map",
+      label: "Map",
     },
+    // {
+    //   imgURL: "/assets/search.svg",
+    //   route: "/search",
+    //   label: "Search",
+    // },
     {
       imgURL: "/assets/heart.svg",
       route: "/activity",

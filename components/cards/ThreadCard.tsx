@@ -60,7 +60,7 @@ function ThreadCard({
             <div className='thread-card_bar' />
           </div>
 
-          <div className='flex w-full flex-col'>
+          <div className='flex w-full flex-col my-0'>
             <Link href={`/profile/${author.id}`} className='w-fit'>
               <h4 className='cursor-pointer text-base-semibold text-light-1'>
                 {author.name}
@@ -69,7 +69,10 @@ function ThreadCard({
 
             <p className='mt-2 text-small-regular text-light-2'>{content}</p>
 
-            <div className={`${isComment && "mb-10"} mt-5 flex flex-col gap-3`}>
+            <div className={`${isComment && "mb-10"} mt-5 flex flex-col gap-3 `}>
+            <Link className='my-0' href={'/map'}>
+              <p className='mt-2 text-small-regular text-light-3'>{getRandomNumberBetween0And5()}km away</p>
+            </Link>
               <div className='flex gap-3.5'>
                 <Image
                   src='/assets/heart-gray.svg'
@@ -78,6 +81,7 @@ function ThreadCard({
                   height={24}
                   className='cursor-pointer object-contain'
                 />
+                 
                 <Link href={`/thread/${id}`}>
                   <Image
                     src='/assets/reply.svg'
@@ -168,3 +172,11 @@ function ThreadCard({
 }
 
 export default ThreadCard;
+
+function getRandomNumberBetween0And5() {
+   const randomDecimal = Math.random();
+   const scaledNumber = randomDecimal * 5.0;
+   const roundedNumber = Math.round(scaledNumber * 10) / 10;
+ 
+   return roundedNumber;
+}

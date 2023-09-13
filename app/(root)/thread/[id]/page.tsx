@@ -18,7 +18,7 @@ const Page = async ({params}: {params: {id: string}}) => {
     const post = await fetchThreadById(params.id);
 
     return (
-    <section className="relative">
+    <section className="relative max-w-4xl m-auto">
         <div>
         <ThreadCard
               key={post._id}

@@ -18,7 +18,7 @@ const Page = async () => {
 
 
     return(
-        <section>
+        <section className="max-w-4xl m-auto">
             <h1 className="head-text mb-10">Activity</h1>
 
             <section className="mt-10 flex flex-col gap-5">

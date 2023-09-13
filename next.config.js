@@ -16,6 +16,14 @@ const nextConfig = {
       remotePatterns: [
         {
           protocol: "https",
+          hostname: "xsgames.co",
+        },
+        {
+          protocol: "https",
+          hostname: "randomuser.me",
+        },
+        {
+          protocol: "https",
           hostname: "img.clerk.com",
         },
         {

@@ -231,19 +231,7 @@ export default async function Home() {
           <p className="no-result">No threads found</p>
         ) : (
           <>
-           {environmentalPosts.map((post) => (
-            <ThreadCard
-              key={post._id}
-              id={post.id}
-              currentUserId={user?.id || ""}
-              parentId={post.parentId}
-              content={post.text}
-              author={post.author}
-              community={post.community}
-              createdAt={post.createdAt}
-              comments={post.children}
-            />
-          ))}
+           
           {result.posts.map((post) => (
             <ThreadCard
               key={post._id}
